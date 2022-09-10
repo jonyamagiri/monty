@@ -4,6 +4,17 @@
 /* Standard Libraries */
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+#include <stddef.h>
+
+#define INSTRUCTIONS              \
+	{                          \
+		{"push", push},     \
+		    {"pall", pall}, \
+		{                   \
+			NULL, NULL   \
+		}                    \
+	}
 
 
 /* Data structures */
@@ -37,6 +48,20 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+* struct help - argument for the current opcode
+* @data_struct: stack mode, stack (default) and queue
+* @argument: the arguments of the string
+*
+* Description: global structure used to pass data around the functions easily
+*/
+typedef struct help
+{
+	int data_struct;
+	char *argument;
+} help;
+help global;
 
 /* Function prototypes */
 stack_t *add_quenode(stack_t **stack, const int n);
