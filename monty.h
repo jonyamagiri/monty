@@ -44,6 +44,9 @@ stack_t *add_dnode(stack_t **stack, const int n);
 size_t print_stack(const stack_t *stack);
 void free_stack(stack_t *stack);
 
+void file_error(char *argv);
+void error_usage(void);
+
 
 
 #endif /* MONTY_H */
