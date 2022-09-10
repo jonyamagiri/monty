@@ -38,7 +38,11 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+/* Function prototypes */
+stack_t *add_quenode(stack_t **stack, const int n);
+stack_t *add_dnode(stack_t **stack, const int n);
+size_t print_stack(const stack_t *stack);
+void free_stack(stack_t *stack);
 
 
 
