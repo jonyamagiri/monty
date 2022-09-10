@@ -10,6 +10,7 @@ extern int status = 0;  /* global variable */
 #include <stdio.h>
 #include <string.h>
 #include <stddef.h>
+#include <ctype.h>
 
 #define INSTRUCTIONS              \
 	{                          \
@@ -74,11 +75,15 @@ size_t print_stack(const stack_t *stack);
 void free_stack(stack_t *stack);
 
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
+void push(stack_t **stack, unsigned int line_cnt);
+void pall(stack_t **stack, unsigned int line_cnt__attribute__((unused)));
 
+
+int is_digit(char *string);
+int isnumber(char *str);
 
 void file_error(char *argv);
 void error_usage(void);
-
 
 
 #endif /* MONTY_H */
