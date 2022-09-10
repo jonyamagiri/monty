@@ -1,6 +1,10 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define  _POSIX_C_SOURCE 200809L
+extern int status = 0;  /* global variable */
+
+
 /* Standard Libraries */
 #include <stdlib.h>
 #include <stdio.h>
@@ -68,6 +72,9 @@ stack_t *add_quenode(stack_t **stack, const int n);
 stack_t *add_dnode(stack_t **stack, const int n);
 size_t print_stack(const stack_t *stack);
 void free_stack(stack_t *stack);
+
+void opcode(stack_t **stack, char *str, unsigned int line_cnt);
+
 
 void file_error(char *argv);
 void error_usage(void);
