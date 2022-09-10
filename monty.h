@@ -2,7 +2,7 @@
 #define MONTY_H
 
 #define  _POSIX_C_SOURCE 200809L
-extern int status = 0;  /* global variable */
+extern int status;  /* global variable */
 
 
 /* Standard Libraries */
@@ -76,7 +76,7 @@ void free_stack(stack_t *stack);
 
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 void push(stack_t **stack, unsigned int line_cnt);
-void pall(stack_t **stack, unsigned int line_cnt__attribute__((unused)));
+void pall(stack_t **stack, unsigned int line_cnt);
 
 
 int is_digit(char *string);
