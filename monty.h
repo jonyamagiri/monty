@@ -23,6 +23,7 @@ extern int status;  /* global variable */
 		    {"nop", nop},     \
 		    {"sub", difference},    \
 		    {"div", division},    \
+		    {"mul", multiple},    \
 		{                   \
 			NULL, NULL   \
 		}                    \
@@ -91,7 +92,7 @@ void adds(stack_t **stack, unsigned int line_cnt);
 void nop(stack_t **stack, unsigned int line_cnt);
 void difference(stack_t **stack, unsigned int line_cnt);
 void division(stack_t **stack, unsigned int line_cnt);
-
+void multiple(stack_t **stack, unsigned int line_cnt);
 
 
 int is_digit(char *string);
