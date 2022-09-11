@@ -20,6 +20,7 @@ extern int status;  /* global variable */
 		    {"pop", pop},     \
 		    {"swap", swap},   \
 		    {"add", adds},    \
+		    {"nop", nop},     \
 		{                   \
 			NULL, NULL   \
 		}                    \
@@ -85,7 +86,7 @@ void pint(stack_t **stack, unsigned int line_cnt);
 void pop(stack_t **stack, unsigned int line_cnt);
 void swap(stack_t **stack, unsigned int line_cnt);
 void adds(stack_t **stack, unsigned int line_cnt);
-
+void nop(stack_t **stack, unsigned int line_cnt);
 
 int is_digit(char *string);
 int isnumber(char *str);
