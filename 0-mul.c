@@ -18,7 +18,7 @@ void multiple(stack_t **stack, unsigned int line_cnt)
 		exit(EXIT_FAILURE);
 	}
 
-	multiple = (*stack)->next->n - (*stack)->n;
+	multiple = (*stack)->next->n * (*stack)->n;
 	pop(stack, line_cnt);
 	(*stack)->n = multiple;
 }
