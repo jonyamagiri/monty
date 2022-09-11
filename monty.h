@@ -17,6 +17,7 @@ extern int status;  /* global variable */
 		{"push", push},     \
 		    {"pall", pall}, \
 		    {"pint", pint},   \
+		    {"pop", pop},     \
 		{                   \
 			NULL, NULL   \
 		}                    \
@@ -79,7 +80,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 void push(stack_t **stack, unsigned int line_cnt);
 void pall(stack_t **stack, unsigned int line_cnt);
 void pint(stack_t **stack, unsigned int line_cnt);
-
+void pop(stack_t **stack, unsigned int line_cnt);
 
 
 int is_digit(char *string);
