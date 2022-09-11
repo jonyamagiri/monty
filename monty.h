@@ -24,6 +24,7 @@ extern int status;  /* global variable */
 		    {"sub", difference},    \
 		    {"div", division},    \
 		    {"mul", multiple},    \
+		    {"mod", modulus},     \
 		{                   \
 			NULL, NULL   \
 		}                    \
@@ -93,6 +94,7 @@ void nop(stack_t **stack, unsigned int line_cnt);
 void difference(stack_t **stack, unsigned int line_cnt);
 void division(stack_t **stack, unsigned int line_cnt);
 void multiple(stack_t **stack, unsigned int line_cnt);
+void modulus(stack_t **stack, unsigned int line_cnt);
 
 
 int is_digit(char *string);
